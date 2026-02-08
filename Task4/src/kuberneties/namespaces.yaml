@@ -1,24 +1,24 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: client
+  name: pro-development-client
 ---
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: tenant
+  name: pro-development-tenant
 ---
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: smart-home
+  name: pro-development-smart-home
 ---
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: accountant  
+  name: pro-development-accountant  
 ---
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: ware-house
+  name: pro-development-ware-house

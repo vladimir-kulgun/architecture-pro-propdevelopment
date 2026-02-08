@@ -2,12 +2,12 @@
 # Privileged users - namespace scoped
 # =========================
 
-# Namespace: client
+# Namespace: pro-development-client
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
   name: pro-development:privileged-view
-  namespace: client
+  namespace: pro-development-client
 rules:
   - apiGroups: [""]
     resources: ["secrets", "configmaps", "pods"]
@@ -17,7 +17,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
   name: pro-development:privileged-view-bindings
-  namespace: client
+  namespace: pro-development-client
 subjects:
   - kind: Group
     name: privileged-users
@@ -27,12 +27,12 @@ roleRef:
   name: pro-development:privileged-view
   apiGroup: rbac.authorization.k8s.io
 ---
-# Namespace: tenant
+# Namespace: pro-development-tenant
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
   name: pro-development:privileged-view
-  namespace: tenant
+  namespace: pro-development-tenant
 rules:
   - apiGroups: [""]
     resources: ["secrets", "configmaps", "pods"]
@@ -42,7 +42,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
   name: pro-development:privileged-view-bindings
-  namespace: tenant
+  namespace: pro-development-tenant
 subjects:
   - kind: Group
     name: privileged-users
@@ -52,12 +52,12 @@ roleRef:
   name: pro-development:privileged-view
   apiGroup: rbac.authorization.k8s.io
 ---
-# Namespace: smart-home
+# Namespace: pro-development-smart-home
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
   name: pro-development:privileged-view
-  namespace: smart-home
+  namespace: pro-development-smart-home
 rules:
   - apiGroups: [""]
     resources: ["secrets", "configmaps", "pods"]
@@ -67,7 +67,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
   name: pro-development:privileged-view-bindings
-  namespace: smart-home
+  namespace: pro-development-smart-home
 subjects:
   - kind: Group
     name: privileged-users
@@ -77,12 +77,12 @@ roleRef:
   name: pro-development:privileged-view
   apiGroup: rbac.authorization.k8s.io
 ---
-# Namespace: ware-house
+# Namespace: pro-development-ware-house
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
   name: pro-development:privileged-view
-  namespace: ware-house
+  namespace: pro-development-ware-house
 rules:
   - apiGroups: [""]
     resources: ["secrets", "configmaps", "pods"]
@@ -92,7 +92,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
   name: pro-development:privileged-view-bindings
-  namespace: ware-house
+  namespace: pro-development-ware-house
 subjects:
   - kind: Group
     name: privileged-users
@@ -102,12 +102,12 @@ roleRef:
   name: pro-development:privileged-view
   apiGroup: rbac.authorization.k8s.io
 ---
-# Namespace: accountant
+# Namespace: pro-development-accountant
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
   name: pro-development:privileged-view
-  namespace: accountant
+  namespace: pro-development-accountant
 rules:
   - apiGroups: [""]
     resources: ["secrets", "configmaps", "pods"]
@@ -117,7 +117,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
   name: pro-development:privileged-view-bindings
-  namespace: accountant
+  namespace: pro-development-accountant
 subjects:
   - kind: Group
     name: privileged-users
