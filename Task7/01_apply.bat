@@ -27,3 +27,7 @@ kubectl get pods -n gatekeeper-system
 
 kubectl apply -f gatekeeper/pod-security-template.yaml
 kubectl apply -f gatekeeper/pod-security-constraint.yaml
+
+@echo "6. Проверим работу Gatekeeper"
+call verify/verify-admission.bat
+call verify/validate-security.bat
