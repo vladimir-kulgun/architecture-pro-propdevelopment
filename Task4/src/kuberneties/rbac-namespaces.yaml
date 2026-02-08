@@ -16,7 +16,7 @@ rules:
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
-  name: pro-development:privileged-view-bindings
+  name: pro-development:privileged-view
   namespace: pro-development-client
 subjects:
   - kind: Group
@@ -41,7 +41,7 @@ rules:
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
-  name: pro-development:privileged-view-bindings
+  name: pro-development:privileged-view
   namespace: pro-development-tenant
 subjects:
   - kind: Group
@@ -66,7 +66,7 @@ rules:
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
-  name: pro-development:privileged-view-bindings
+  name: pro-development:privileged-view
   namespace: pro-development-smart-home
 subjects:
   - kind: Group
@@ -91,7 +91,7 @@ rules:
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
-  name: pro-development:privileged-view-bindings
+  name: pro-development:privileged-view
   namespace: pro-development-ware-house
 subjects:
   - kind: Group
@@ -116,7 +116,7 @@ rules:
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
-  name: pro-development:privileged-view-bindings
+  name: pro-development:privileged-view
   namespace: pro-development-accountant
 subjects:
   - kind: Group
@@ -154,7 +154,7 @@ rules:
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
-  name: pro-development:view-only-bindings
+  name: pro-development:view-only
 subjects:
   - kind: Group
     name: view-only-users
@@ -179,7 +179,7 @@ rules:
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
-  name: pro-development:cluster-admin-bindings
+  name: pro-development:cluster-admin
 subjects:
   - kind: Group
     name: cluster-admin-users
