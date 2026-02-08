@@ -1,3 +1,3 @@
 cls
 docker desktop start
-minikube start --driver=docker
+minikube start --driver=docker --cni=calico
