@@ -16,7 +16,14 @@ kubectl apply -f secure-manifests/01-pod.yaml
 kubectl apply -f secure-manifests/02-pod.yaml
 kubectl apply -f secure-manifests/03-pod.yaml
 
-rem kubectl apply -f https://raw.githubusercontent.com/open-policy-agent/gatekeeper/master/deploy/gatekeeper.yaml
-rem kubectl get pods -n gatekeeper-system 
-rem @pause
-rem kubectl get pods -n gatekeeper-system 
+@echo "5. Настройте OPA Gatekeeper с набором правил:"
+kubectl apply -f https://raw.githubusercontent.com/open-policy-agent/gatekeeper/master/deploy/gatekeeper.yaml
+kubectl get pods -n gatekeeper-system 
+@echo "waiting for gatekeeper to be ready..."
+timeout /t 30
+kubectl get pods -n gatekeeper-system 
+@pause
+kubectl get pods -n gatekeeper-system 
+
+kubectl apply -f gatekeeper/pod-security-template.yaml
+kubectl apply -f gatekeeper/pod-security-constraint.yaml
